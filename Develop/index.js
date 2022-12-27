@@ -53,21 +53,15 @@ const questions = [
         message: 'How can people best reach you with questions?',
         name: 'questions'}
 
-
-
     ];
-
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => { if (err) {
         return console.log(err);
     }
-
     
     console.log("Congratulations! Your file is created!")   });
-
-
 }
 
 const writeFileAsync = util.promisify(writeToFile);
@@ -79,12 +73,11 @@ await inquirer.prompt(questions).then((answers) => {
     JSON.stringify(answers);
     const userResponse = answers;
 
+    const markdown = generateMarkdown(userResponse);
+    console.log(markdown);
 
-const markdown = generateMarkdown(userResponse);
-console.log(markdown);
-
-writeFileAsync('Example.md', markdown);
-console.log("Complete!");
+    writeFileAsync('Example.md', markdown);
+    console.log("Complete!");
 });
 }
 

@@ -16,7 +16,7 @@ function renderLicenseBadge(license) {
       return "![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)";
 
     case "The MIT License":
-      return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg))";
+      return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
 
     case "Mozilla Public License 2.0":
       return "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)";
